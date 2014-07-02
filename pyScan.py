@@ -5,6 +5,5 @@ import pyclamd
 
 cd = pyclamd.ClamdAgnostic()
 result = cd.scan_file(sys.argv[1])
-
-if result != "None":
-	print(result)
+f = open('/home/dm/fiscanner/av.log', 'a')
+f.write(sys.argv[1] + ": " + str(result) + "\n")
